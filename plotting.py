@@ -15,8 +15,10 @@ def plot_colormap(G, val_map):
     """
     values = [val_map.get(node, 0.25) for node in G.nodes()]
     cmap=plt.get_cmap('viridis')
+    layout = nx.spring_layout(G, seed = 100)
     nx.draw(
         G,
+        pos = layout,
         node_size=15,
         width=0.5,
         cmap=plt.get_cmap('viridis'),

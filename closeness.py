@@ -8,7 +8,8 @@ import matplotlib.pyplot as plt
 from file_to_nx import *
 from plotting import *
 
-G = create_graph('data/soc-wiki-Vote/soc-wiki-Vote.txt', delim = ' ')
+# G = create_graph('data/soc-wiki-Vote/soc-wiki-Vote.txt', delim = ' ')
+G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
 
 def closeness_centrality(G):
     """
@@ -16,8 +17,8 @@ def closeness_centrality(G):
 
     Args:
         G: A NetworkX Graph
-    
-    Returns: 
+
+    Returns:
         A dictionary with node:closeness_centrality for each node in G.
     """
     NUM_NODES = G.number_of_nodes()
@@ -29,9 +30,9 @@ def closeness_centrality(G):
                 path = nx.shortest_path(G, start_node, end_node) # get shortest path
                 len_path = len(path) - 1 # get number of edges in shortest path
                 l_all_paths += len_path
-        
+
         val_map[start_node] = (NUM_NODES - 1) / l_all_paths
-    
+
     return val_map
 
 if __name__ == "__main__":

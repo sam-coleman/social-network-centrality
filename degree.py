@@ -16,16 +16,15 @@ def degree_centrality(G):
 
     Args:
         G: A NetworkX Graph
-    
-    Returns: 
+
+    Returns:
         A dictionary with node:degree_centrality for each node in G.
     """
     val_map = {}
-    NUM_NODES = G.number_of_nodes()
+    NUM_NODES = G.number_of_nodes() - 1.0
     deg_list = G.degree() # list of tuples
     for n in deg_list:
         val_map[n[0]] = n[1] / NUM_NODES
-        
     return val_map
 
 if __name__ == "__main__":

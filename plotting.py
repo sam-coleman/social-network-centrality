@@ -18,7 +18,7 @@ def plot_colormap(G, val_map):
     layout = nx.spring_layout(G, seed = 100)
     nx.draw(
         G,
-        pos = layout,
+        pos=layout,
         node_size=15,
         width=0.5,
         cmap=plt.get_cmap('viridis'),

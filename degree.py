@@ -28,5 +28,6 @@ def degree_centrality(G):
         
     return val_map
 
-val_map = degree_centrality(G)
-plot_colormap(G, val_map)
+if __name__ == "__main__":
+    val_map = degree_centrality(G)
+    plot_colormap(G, val_map)

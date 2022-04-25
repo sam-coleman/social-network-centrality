@@ -41,3 +41,8 @@ if __name__ == "__main__":
     val_map_closeness = closeness_centrality(G)
     val_map_betweenness = betweenness_centrality(G)
     # plot_colormap(G, val_map) #TODO: uncomment this and sub out val_map when you finish your implementation
+
+    # code for problem 2
+    # G = create_graph('data/your-filepath-here.txt', delim = ' ')
+    # val_map_choice = nx.your_centrality_here(G) # you will likely need to check the website for the default parameters
+    # plot_colormap(G, val_map_choice)

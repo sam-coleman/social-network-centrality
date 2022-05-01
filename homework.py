@@ -1,8 +1,13 @@
+"""
+Advanced Algorithms Centrality Homework
+Olin College of Engineering
+"""
+
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from file_to_nx import *
-from plotting import *
+from file_to_nx import create_graph
+from plotting import plot_colormap
 
 def closeness_centrality(G):
     """
@@ -42,7 +47,7 @@ if __name__ == "__main__":
     val_map_betweenness = betweenness_centrality(G)
     # plot_colormap(G, val_map) #TODO: uncomment this and sub out val_map when you finish your implementation
 
-    # code for problem 2
+    # code for problem 2. Uncomment the below lines to help
     # G = create_graph('data/your-filepath-here.txt', delim = ' ')
     # val_map_choice = nx.your_centrality_here(G) # you will likely need to check the website for the default parameters
     # plot_colormap(G, val_map_choice)

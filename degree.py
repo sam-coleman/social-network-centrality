@@ -5,8 +5,8 @@ Our implementation for degree centrality
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from file_to_nx import *
-from plotting import *
+from file_to_nx import create_graph
+from plotting import plot_colormap
 
 G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
 

@@ -6,10 +6,10 @@ networx equivalents of the functions.
 import networkx as nx
 import pytest
 
-from file_to_nx import *
-from betweenness import *
-from degree import *
-from closeness import *
+from file_to_nx import create_graph
+from betweenness import betweenness_centrality
+from degree import degree_centrality
+from closeness import closeness_centrality
 
 # G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
 G = create_graph('data/fb-pages-food/fb-pages-food.edges', delim = ' ')

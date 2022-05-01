@@ -5,6 +5,7 @@ Our implementation for betweenness centrality
 import networkx as nx
 import matplotlib.pyplot as plt
 
+<<<<<<< HEAD
 from file_to_nx import *
 from plotting import *
 
@@ -46,3 +47,15 @@ def betweenness_centrality(G):
 
 
 print(betweenness_centrality(G))
+=======
+from file_to_nx import create_graph
+from plotting import plot_colormap
+
+G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
+
+def betweenness_centrality(G):
+    pass
+
+# val_map = betweenness_centrality(G)
+# plot_colormap(G, val_map)
+>>>>>>> 4ad4edade6f1cd0fd236327a8fe1b3e7fad630b4

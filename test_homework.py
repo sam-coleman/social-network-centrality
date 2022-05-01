@@ -7,8 +7,8 @@ Run with: pytest test_homework.py -W ignore::DeprecationWarning
 import networkx as nx
 import pytest
 
-from file_to_nx import *
-from homework import *
+from file_to_nx import create_graph
+from homework import closeness_centrality, betweenness_centrality
 
 G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
 # G = create_graph('data/soc-wiki-Vote/soc-wiki-Vote.txt', delim = ' ')

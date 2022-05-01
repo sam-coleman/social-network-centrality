@@ -1,5 +1,7 @@
 """
-Plotting
+Advanced Algorithms Centrality Homework
+Olin College of Engineering
+Helper file for plotting centrality graphs
 """
 
 import networkx as nx

@@ -1,5 +1,7 @@
 """
-Reads in a data file formated as a list of edges, and builds a networx graph
+Advanced Algorithms Centrality Homework
+Olin College of Engineering
+Helper file to read list of edges and create NetworkX graph
 """
 
 import networkx as nx

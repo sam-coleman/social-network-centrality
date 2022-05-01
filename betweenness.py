@@ -5,22 +5,15 @@ Our implementation for betweenness centrality
 import networkx as nx
 import matplotlib.pyplot as plt
 
-<<<<<<< HEAD
 from file_to_nx import *
 from plotting import *
 
-# G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
-G = nx.Graph()
-G.add_edge(1, 2)
-G.add_edge(1, 5)
-G.add_edge(2, 5)
-G.add_edge(2, 3)
-G.add_edge(3, 5)
-G.add_edge(3, 4)
-G.add_edge(4, 5)
-
+G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
 
 def find_pairs(all_nodes, node):
+    """
+    Finds all pairs of nodes that do not contain node
+    """
     pairs = []
     for i in range(len(all_nodes)):
         for j in range(i+1, len(all_nodes)):
@@ -29,6 +22,15 @@ def find_pairs(all_nodes, node):
     return pairs
 
 def betweenness_centrality(G):
+    """
+    Return betweenness centrality measure for all nodes in a graph.
+
+    Args:
+        G: A NetworkX Graph
+
+    Returns:
+        A dictionary with node:betweenness_centrality for each node in G.
+    """
     val_map = {}
     all_nodes = list(G.nodes)
     for node in all_nodes:
@@ -41,21 +43,9 @@ def betweenness_centrality(G):
             for path in paths:
                 if node in path:
                     pair_sum += 1
-            sum += (pair_sum / len(paths))
-        val_map[node] = sum / len(pairs)
+            sum += (pair_sum / len(paths)) # normalize to fraction of paths
+        val_map[node] = sum / len(pairs) # normalize to nodes
     return val_map
 
 
 print(betweenness_centrality(G))
-=======
-from file_to_nx import create_graph
-from plotting import plot_colormap
-
-G = create_graph('data/soc-dolphins/soc-dolphins.txt', delim = ' ')
-
-def betweenness_centrality(G):
-    pass
-
-# val_map = betweenness_centrality(G)
-# plot_colormap(G, val_map)
->>>>>>> 4ad4edade6f1cd0fd236327a8fe1b3e7fad630b4

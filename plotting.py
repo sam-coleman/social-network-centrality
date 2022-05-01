@@ -19,7 +19,7 @@ def plot_colormap(G, val_map):
     nx.draw(
         G,
         pos=layout,
-        node_size=15,
+        node_size=20,
         width=0.5,
         cmap=plt.get_cmap('viridis'),
         node_color=values,
